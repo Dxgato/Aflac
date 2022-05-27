@@ -92,13 +92,3 @@ end
 function onStepHit()
 	-- triggered 16 times per section
 end
-function onEndSong()
-	if not allowCountdown and isStoryMode then --Block the first countdown
-			startVideo('cutsceneending');
-		
-		
-		allowCountdown = true;
-		return Function_Stop;
-	end
-	return Function_Continue;
-end
