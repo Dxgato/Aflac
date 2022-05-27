@@ -17,16 +17,6 @@ local del = 0;
 local del2 = 0;
 local drain = 0.01 -- the funne
 local allowCountdown = false
-function onStartCountdown()
-	if not allowCountdown and isStoryMode and not seenCutscene then --Block the first countdown
-			startVideo('baldi');
-		
-		
-		allowCountdown = true;
-		return Function_Stop;
-	end
-	return Function_Continue;
-end
 function onUpdate()
 	if followchars == true then
         if mustHitSection == false then
