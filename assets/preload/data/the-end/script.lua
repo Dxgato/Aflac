@@ -2,14 +2,6 @@ local angleshit = 1;
 local damage = 0;
 local anglevar = 1;
 local starting 
-function onStartCountdown()
-	if not allowCountdown and isStoryMode and not seenCutscene then --Block the first countdown
-		startVideo('theendcutscene');
-		allowCountdown = true;
-		return Function_Stop;
-	end
-	return Function_Continue;
-end
 function onTimerCompleted(tag, loops, loopsLeft)
 	if tag == 'startDialogue' then -- Timer completed, play dialogue
 		startDialogue('dialogue', 'breakfast');
